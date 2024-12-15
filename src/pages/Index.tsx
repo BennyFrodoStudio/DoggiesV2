@@ -1,8 +1,11 @@
 import { DogPost } from "@/components/DogPost";
 import { CreatePost } from "@/components/CreatePost";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const navigate = useNavigate();
   const posts = [
     {
       id: 1,
@@ -39,7 +42,26 @@ const Index = () => {
       <header className="bg-white border-b border-gray-200 fixed top-0 w-full z-10">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-dog-500">DoggyGram</h1>
+            <img
+              src="/lovable-uploads/a4ba23b1-9dc5-4672-97b5-2164e4a6d59a.png"
+              alt="Benny and Frodos Studio"
+              className="h-12"
+            />
+            <div className="flex gap-4">
+              <Button
+                variant="ghost"
+                className="text-dog-500 hover:text-dog-600"
+                onClick={() => navigate("/login")}
+              >
+                Sign in
+              </Button>
+              <Button
+                className="bg-dog-500 hover:bg-dog-600"
+                onClick={() => navigate("/signup")}
+              >
+                Sign up
+              </Button>
+            </div>
           </div>
         </div>
       </header>
