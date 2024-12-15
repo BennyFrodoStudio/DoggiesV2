@@ -42,11 +42,10 @@ const Index = () => {
       <header className="bg-white border-b border-gray-200 fixed top-0 w-full z-10">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <img
-              src="/lovable-uploads/a4ba23b1-9dc5-4672-97b5-2164e4a6d59a.png"
-              alt="Benny and Frodos Studio"
-              className="h-12"
-            />
+            <div className="flex flex-col items-start">
+              <h1 className="text-3xl font-bold text-dog-600">Doggies</h1>
+              <p className="text-sm text-gray-600">1st Dog Social Media Platform</p>
+            </div>
             <div className="flex gap-4">
               <Button
                 variant="ghost"
@@ -75,6 +74,17 @@ const Index = () => {
           ))}
         </div>
       </main>
+
+      <footer className="bg-white border-t border-gray-200 py-4 mt-8">
+        <div className="container mx-auto px-4 flex justify-center items-center">
+          <p className="text-sm text-gray-600">Powered by</p>
+          <img
+            src="/lovable-uploads/a4ba23b1-9dc5-4672-97b5-2164e4a6d59a.png"
+            alt="Benny and Frodos Studio"
+            className="h-8 ml-2"
+          />
+        </div>
+      </footer>
     </motion.div>
   );
 };
